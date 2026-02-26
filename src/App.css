@@ -1,4 +1,4 @@
-@keyframes blink {
+/* @keyframes blink {
   0% {
     opacity: 1;
   }
@@ -13,6 +13,11 @@
 }
 h1 {
   animation: blink 2s infinite;
+  text-align: center;
+  color: red;
+} */
+
+h1 {
   text-align: center;
   color: red;
 }
