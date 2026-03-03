@@ -4,49 +4,48 @@ import astro_fall_icon from "../assets/astro.svg";
 import { useState } from "react";
 
 function Astro() {
-  let [booster, setBooster] = useState(true);
-  let in_transition: boolean = false;
+  const [booster, setBooster] = useState(true);
+  const [inTransition, setInTransition] = useState(true);
 
-  let astro_click = () => {
-    //TODO: Implement quick sequence of booster on and off to give illusion of astro's disapproval
+  const astro_click = () => {
+    if (inTransition) return;
+    setInTransition(true);
     setBooster(!booster);
   };
 
   return (
-    <div>
-      {booster
-        ? !in_transition &&
-          (in_transition = true) && (
-            <motion.img
-              onClick={() => !in_transition && astro_click()}
-              initial={{ y: "100vh" }}
-              animate={{ y: 0 }}
-              onAnimationComplete={() => {
-                in_transition = false;
-              }}
-              transition={{
-                ease: "easeOut",
-                duration: 2,
-              }}
-              width={"125"}
-              src={astro_icon}
-              alt="astro"
-            />
-          )
-        : !in_transition && (
-            <motion.img
-              animate={{ y: "100vh" }}
-              onAnimationComplete={() => {
-                in_transition = false;
-                setBooster(!booster);
-              }}
-              transition={{ duration: 1.2 }}
-              width={"125px"}
-              src={astro_fall_icon}
-              alt="astro_falling"
-            />
-          )}
+    <div className={inTransition ? "cursor-default" : "cursor-pointer"}>
+      {booster ? (
+        <motion.img
+          onClick={astro_click}
+          initial={{ y: "100vh" }}
+          animate={{ y: 0 }}
+          onAnimationStart={() => setInTransition(true)}
+          onAnimationComplete={() => setInTransition(false)}
+          transition={{
+            ease: "easeOut",
+            duration: 2,
+          }}
+          width={"125"}
+          src={astro_icon}
+          alt="astro"
+        />
+      ) : (
+        <motion.img
+          animate={{ y: "100vh" }}
+          onAnimationStart={() => setInTransition(true)}
+          onAnimationComplete={() => {
+            setInTransition(false);
+            setBooster(true);
+          }}
+          transition={{ duration: 1.2 }}
+          width={"125px"}
+          src={astro_fall_icon}
+          alt="astro_falling"
+        />
+      )}
     </div>
   );
 }
+
 export default Astro;
