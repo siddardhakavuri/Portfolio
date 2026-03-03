@@ -1,6 +1,6 @@
 import { motion } from "motion/react";
-import astro_icon from "../assets/astro.svg";
-import astro_fall_icon from "../assets/astro_falling.svg";
+import astro_icon from "../assets/astro_flying.svg";
+import astro_fall_icon from "../assets/astro.svg";
 import { useState } from "react";
 
 function Astro() {
@@ -13,15 +13,12 @@ function Astro() {
   };
 
   return (
-    <span
-      onClick={() => {
-        !in_transition && astro_click();
-      }}
-    >
+    <div>
       {booster
         ? !in_transition &&
           (in_transition = true) && (
             <motion.img
+              onClick={() => !in_transition && astro_click()}
               initial={{ y: "100vh" }}
               animate={{ y: 0 }}
               onAnimationComplete={() => {
@@ -31,7 +28,7 @@ function Astro() {
                 ease: "easeOut",
                 duration: 2,
               }}
-              width={"200px"}
+              width={"125"}
               src={astro_icon}
               alt="astro"
             />
@@ -43,13 +40,13 @@ function Astro() {
                 in_transition = false;
                 setBooster(!booster);
               }}
-              transition={{ duration: 0.6 }}
-              width={"200px"}
+              transition={{ duration: 1.2 }}
+              width={"125px"}
               src={astro_fall_icon}
               alt="astro_falling"
             />
           )}
-    </span>
+    </div>
   );
 }
 export default Astro;
