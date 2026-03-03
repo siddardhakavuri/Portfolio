@@ -10,19 +10,20 @@ const About = () => {
         viewport={{ once: true }}
         className=""
       >
-        <h2 className="text-4xl font-bold mb-8 bg-gradient-to-r from-blue-400 to-emerald-400 bg-clip-text text-transparent inline-block">
+        <h2 className="text-4xl font-bold mb-8 bg-linear-to-r from-blue-400 to-emerald-400 bg-clip-text text-transparent inline-block">
           About Me
         </h2>
         <p className="text-xl text-gray-300 leading-relaxed mb-6">
-          Hello! I'm a passionate software engineer dedicated to building
-          exceptional digital experiences. I specialize in full-stack
-          development with a keen eye for design and performance.
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse totam
+          laborum sequi beatae voluptas expedita, obcaecati ex odit. A, optio.
+          Alias soluta perferendis aspernatur cum cumque minima sapiente illum
+          labore.
         </p>
         <p className="text-xl text-gray-300 leading-relaxed">
-          My journey in tech has been driven by a constant curiosity and a
-          desire to solve complex problems with elegant solutions. When I'm not
-          coding, you can find me exploring new technologies or contributing to
-          open source.
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse totam
+          laborum sequi beatae voluptas expedita, obcaecati ex odit. A, optio.
+          Alias soluta perferendis aspernatur cum cumque minima sapiente illum
+          labore.
         </p>
       </motion.div>
     </section>

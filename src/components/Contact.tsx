@@ -10,12 +10,14 @@ const Contact = () => {
         viewport={{ once: true }}
         className="text-center max-w-2xl mx-auto"
       >
-        <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent inline-block">
+        <h2 className="text-4xl font-bold mb-6 bg-linear-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent inline-block">
           Get In Touch
         </h2>
         <p className="text-xl text-gray-300 mb-10 leading-relaxed">
-          I'm currently looking for new opportunities. Whether you have a
-          question or just want to say hi, I'll try my best to get back to you!
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse totam
+          laborum sequi beatae voluptas expedita, obcaecati ex odit. A, optio.
+          Alias soluta perferendis aspernatur cum cumque minima sapiente illum
+          labore.
         </p>
 
         <motion.a

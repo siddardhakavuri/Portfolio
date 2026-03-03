@@ -7,7 +7,7 @@ const Footer = () => {
           href="#"
           className="text-gray-300 hover:text-white transition-colors"
         >
-          Siddhu
+          Siddardha
         </a>
       </p>
       <p className="mt-2 text-xs opacity-75">

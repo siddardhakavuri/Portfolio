@@ -2,25 +2,25 @@ import { motion } from "motion/react";
 
 const experiences = [
   {
-    role: "Senior Full Stack Engineer",
-    company: "Tech Innovators Inc.",
-    period: "2022 - Present",
+    role: "Senior Software Engineer",
+    company: "Company",
+    period: "20XX - Present",
     description:
-      "Led the development of a scalable microservices architecture. Improved application performance by 40%.",
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione tempora numquam illo doloremque voluptas quis debitis atque eos, veritatis aliquid, quae ab enim nam doloribus tenetur quasi minima adipisci aliquam?",
   },
   {
     role: "Software Engineer",
-    company: "Creative Solutions LLC",
-    period: "2019 - 2022",
+    company: "Company",
+    period: "20XX - 20XX",
     description:
-      "Developed and maintained multiple React applications. Collaborated closely with UI/UX designers.",
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione tempora numquam illo doloremque voluptas quis debitis atque eos, veritatis aliquid, quae ab enim nam doloribus tenetur quasi minima adipisci aliquam?",
   },
   {
-    role: "Frontend Developer Intern",
-    company: "StartUp Vision",
-    period: "2018 - 2019",
+    role: "Software Engineer",
+    company: "Company",
+    period: "20XX - 20XX",
     description:
-      "Assisted in building responsive web pages and translating Figma designs into code.",
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione tempora numquam illo doloremque voluptas quis debitis atque eos, veritatis aliquid, quae ab enim nam doloribus tenetur quasi minima adipisci aliquam?",
   },
 ];
 
@@ -33,7 +33,7 @@ const Experience = () => {
         transition={{ duration: 0.8 }}
         viewport={{ once: true }}
       >
-        <h2 className="text-4xl font-bold mb-12 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent inline-block">
+        <h2 className="text-4xl font-bold mb-12 bg-linear-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent inline-block">
           Experience
         </h2>
 
@@ -47,7 +47,7 @@ const Experience = () => {
               viewport={{ once: true }}
               className="relative pl-8 md:pl-0"
             >
-              <div className="absolute w-4 h-4 bg-cyan-400 rounded-full -left-[9px] top-1.5 border-4 border-black " />
+              <div className="absolute w-4 h-4 bg-cyan-400 rounded-full -left-2.25 top-1.5 border-4 border-black " />
               <div className="md:pl-8">
                 <div className="flex flex-col md:flex-row md:items-center justify-between mb-2">
                   <h3 className="text-2xl font-semibold text-white">
