@@ -2,13 +2,13 @@ import { motion } from "motion/react";
 
 const About = () => {
   return (
-    <section id="about" className="py-20">
+    <section id="about" className="h-[85vh] flex flex-col justify-center">
       <motion.div
+      
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
         viewport={{ once: true }}
-        className=""
       >
         <h2 className="text-4xl font-bold mb-8 bg-linear-to-r from-blue-400 to-emerald-400 bg-clip-text text-transparent inline-block">
           About Me

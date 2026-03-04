@@ -26,7 +26,7 @@ function Astro() {
             ease: "easeOut",
             duration: 2,
           }}
-          width={"125"}
+          width={"60"}
           src={astro_icon}
           alt="astro"
         />
@@ -39,7 +39,7 @@ function Astro() {
             setBooster(true);
           }}
           transition={{ duration: 1.2 }}
-          width={"125px"}
+          width={"60"}
           src={astro_fall_icon}
           alt="astro_falling"
         />

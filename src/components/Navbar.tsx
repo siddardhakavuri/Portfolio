@@ -6,7 +6,7 @@ const Navbar = () => {
         SK
       </a>
       <div className="flex text-xl items-center overflow-auto">
-        <a href="#about" className="pl-6">
+        <a href="#" className="pl-6">
           About
         </a>
         <a href="#experience" className="pl-6">

@@ -4,6 +4,9 @@ const Footer = () => {
       <p className="mt-2 text-xs opacity-75">
         &copy; {new Date().getFullYear()} Siddardha. All rights reserved.
       </p>
+      <div>
+        <a href="linkedin.com/in/siddardhakavuri"></a>
+      </div>
     </footer>
   );
 };
