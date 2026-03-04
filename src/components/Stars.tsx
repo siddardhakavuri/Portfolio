@@ -31,7 +31,7 @@ const Stars = () => {
   }, []);
 
   return (
-    <div className="fixed inset-0 z-[-1] overflow-hidden pointer-events-none">
+    <div className="fixed inset-0 z-[-1] overflow-clip pointer-events-none">
       {stars.map((star) => (
         <div
           key={star.id}
