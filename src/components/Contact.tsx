@@ -13,11 +13,9 @@ const Contact = () => {
         <h2 className="text-4xl font-bold mb-6 bg-linear-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent inline-block">
           Get In Touch
         </h2>
-        <p className="text-xl text-gray-300 mb-10 leading-relaxed">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse totam
-          laborum sequi beatae voluptas expedita, obcaecati ex odit. A, optio.
-          Alias soluta perferendis aspernatur cum cumque minima sapiente illum
-          labore.
+        <p className="text-lg text-gray-300 mb-10 leading-relaxed">
+          I’d love to hear from you. Whether you have a specific project in mind
+          or just want to say hello, feel free to drop me a message!
         </p>
 
         <motion.a

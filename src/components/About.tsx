@@ -4,7 +4,7 @@ const About = () => {
   return (
     <section
       id="about"
-      className="content-center h-[75vh] mb-[20vh] flex flex-col justify-center"
+      className="content-center h-[75vh] mb-[10vh] flex flex-col justify-center"
     >
       <div className="flex justify-center content-center">
         <motion.div
@@ -18,7 +18,7 @@ const About = () => {
           </h2>
           <div className="flex justify-center content-center">
             <p className="md:w-2/3 md:text-xl text-lg text-center flex flex-wrap  text-gray-300 leading-relaxed mb-6">
-              Full Stack Web Developer specialized at building scalable
+              Full Stack Web Developer specializing in building scalable,
               high-performance web applications.
             </p>
           </div>

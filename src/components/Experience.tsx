@@ -3,30 +3,30 @@ import { motion } from "motion/react";
 const experiences = [
   {
     role: "Senior Software Engineer",
-    company: "Company",
-    period: "20XX - Present",
+    company: "Kolla Soft Inc.",
+    period: "2024 - Present",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione tempora numquam illo doloremque voluptas quis debitis atque eos, veritatis aliquid, quae ab enim nam doloribus tenetur quasi minima adipisci aliquam?",
+      "Architected robust enterprise applications using Spring Boot, leveraging Java and GraphQL to build seamless API integrations between the provider portal and various backend systems.",
+  },
+  {
+    role: "Java Full-Stack Developer",
+    company: "AdeptPros",
+    period: "2020 - 2021",
+    description:
+      "Developed Spring Boot insurance services to handle claim submission, validation workflows, and user profile operations, ensuring integration with downstream services and data pipelines.",
   },
   {
     role: "Software Engineer",
-    company: "Company",
-    period: "20XX - 20XX",
+    company: "Genius Port",
+    period: "2019 - 2020",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione tempora numquam illo doloremque voluptas quis debitis atque eos, veritatis aliquid, quae ab enim nam doloribus tenetur quasi minima adipisci aliquam?",
-  },
-  {
-    role: "Software Engineer",
-    company: "Company",
-    period: "20XX - 20XX",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione tempora numquam illo doloremque voluptas quis debitis atque eos, veritatis aliquid, quae ab enim nam doloribus tenetur quasi minima adipisci aliquam?",
+      "Designed and implemented e-commerce features for a leading retail website, enhancing customer shopping experience with Java and Spring MVC.",
   },
 ];
 
 const Experience = () => {
   return (
-    <section id="experience" className="p-20">
+    <section id="experience" className="py-[10vh]">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
