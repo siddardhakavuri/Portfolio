@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 
 const ScrollToTop = () => {
   const [isAtBottom, setIsAtBottom] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -10,6 +11,9 @@ const ScrollToTop = () => {
         window.innerHeight + window.scrollY >=
         document.documentElement.scrollHeight - 50;
       setIsAtBottom(isBottom);
+
+      // Show button after scrolling past 20% of the screen height
+      setIsVisible(window.scrollY > window.innerHeight * 0.2);
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -23,10 +27,14 @@ const ScrollToTop = () => {
     <a
       href="#"
       aria-label="Scroll to top"
-      className="fixed bottom-8 right-8 z-50 group"
+      className={`fixed bottom-8 right-8 z-50 group transition-all duration-300 ${
+        isVisible
+          ? "opacity-100 pointer-events-auto"
+          : "opacity-0 pointer-events-none"
+      }`}
     >
       <button
-        className={`p-3 rounded-full bg-transparent text-white shadow-lg backdrop-blur-md transition-all duration-300 group-hover:border-cyan-400/50 group-hover:text-cyan-400 group-hover:bg-cyan-400/10 ${
+        className={`p-3 rounded-full bg-transparent text-white shadow-lg backdrop-blur-md group-hover:border-cyan-400/50 group-hover:text-cyan-400 group-hover:bg-cyan-400/10 ${
           isAtBottom ? "animate-bounce" : "group-hover:-translate-y-1"
         }`}
       >
