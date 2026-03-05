@@ -14,9 +14,14 @@ const Stars = () => {
   >([]);
 
   useEffect(() => {
-    // Generate stars dynamically on mount
+    // Generate stars dynamically
     const generateStars = () => {
-      const newStars = Array.from({ length: 120 }).map((_, i) => ({
+      // Calculate number of stars based on screen area
+      const numStars = Math.floor(
+        (window.innerWidth * window.innerHeight) / 25000,
+      );
+
+      const newStars = Array.from({ length: numStars }).map((_, i) => ({
         id: i,
         top: `${Math.random() * 100}%`,
         left: `${Math.random() * 100}%`,
@@ -27,15 +32,16 @@ const Stars = () => {
       }));
       setStars(newStars);
     };
+
     generateStars();
   }, []);
 
   return (
-    <div className="fixed inset-0 z-[-1] overflow-clip pointer-events-none">
+    <div className="fixed inset-0 z-[-1] overflow-hidden pointer-events-none">
       {stars.map((star) => (
         <div
           key={star.id}
-          className="absolute bg-white rounded-full animate-pulse shadow-[0_0_15px_3px_rgba(255,255,255,0.7)]"
+          className="absolute bg-white rounded-full animate-pulse shadow-[0_0_10px_2px_rgba(255,255,255,0.7)]"
           style={{
             top: star.top,
             left: star.left,
