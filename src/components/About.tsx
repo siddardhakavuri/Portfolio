@@ -13,9 +13,9 @@ const About = () => {
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >
-          <h2 className="md:text-5xl text-3xl flex justify-center content-center font-bold mb-8 bg-linear-to-r from-blue-400 to-emerald-400 bg-clip-text text-transparent ">
+          <h1 className="md:text-5xl text-3xl flex justify-center content-center font-bold mb-8 bg-linear-to-r from-blue-400 to-emerald-400 bg-clip-text text-transparent ">
             HEY, I'M SIDDARDHA KAVURI
-          </h2>
+          </h1>
           <div className="flex justify-center content-center">
             <p className="md:w-2/3 md:text-xl text-lg text-center flex flex-wrap  text-gray-300 leading-relaxed mb-6">
               Full Stack Web Developer specializing in building scalable,
