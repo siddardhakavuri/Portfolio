@@ -21,9 +21,9 @@ const projects = [
       "A high-performance showcase built with type-safe, component-driven architecture and hardware-accelerated animations and page transitions.",
     tags: [
       "TypeScript",
+      "React",
       "Tailwind",
       "Framer Motion",
-      "React",
       "Vite",
       "Cloudflare",
     ],

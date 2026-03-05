@@ -16,10 +16,13 @@ const Stars = () => {
   useEffect(() => {
     // Generate stars dynamically
     const generateStars = () => {
-      // Calculate number of stars based on screen area
-      const numStars = Math.floor(
-        (window.innerWidth * window.innerHeight) / 25000,
-      );
+      // Control number of stars for large and small screens independently
+      const isMobile = window.innerWidth < 768;
+
+      // Adjust these divisors to change density, or use fixed numbers (e.g., 50 vs 150)
+      const numStars = isMobile
+        ? Math.floor((window.innerWidth * window.innerHeight) / 6000) // Small screens configuration
+        : Math.floor((window.innerWidth * window.innerHeight) / 15000); // Large screens configuration
 
       const newStars = Array.from({ length: numStars }).map((_, i) => ({
         id: i,
