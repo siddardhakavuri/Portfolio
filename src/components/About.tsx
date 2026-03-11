@@ -18,8 +18,8 @@ const About = () => {
           </h1>
           <div className="flex justify-center content-center">
             <p className="md:w-2/3 md:text-xl text-lg text-center flex flex-wrap  text-gray-300 leading-relaxed mb-6">
-              Full Stack Web Developer specializing in building scalable,
-              high-performance web applications.
+              IT Support Professional specializing in troubleshooting,
+              maintaining, and optimizing technical infrastructure.
             </p>
           </div>
           <div className="flex justify-center text-white gap-3">

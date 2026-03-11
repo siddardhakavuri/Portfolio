@@ -56,7 +56,7 @@ const Projects = () => {
               whileHover={{ y: -5, transition: { duration: 0.1 } }}
               transition={{ duration: 0.2 }}
               viewport={{ once: true }}
-              className="group block p-8 rounded-2xl bg-white/7 border border-white/15 hover:bg-white/12 transition-colors"
+              className="group block p-8 rounded-2xl bg-white/5 border border-white/10 hover:bg-white/10 transition-colors"
             >
               <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors min-h-16 flex items-center">
                 {project.title}

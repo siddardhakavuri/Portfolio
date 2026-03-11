@@ -2,25 +2,18 @@ import { motion } from "motion/react";
 
 const experiences = [
   {
-    role: "Senior Software Engineer",
+    role: "Information Technology Analyst",
     company: "Kolla Soft Inc.",
     period: "2024 - Present",
     description:
-      "Architected robust enterprise applications using Spring Boot, leveraging Java and GraphQL to build seamless API integrations between the provider portal and various backend systems.",
+      "Manage enterprise IT infrastructure utilizing Active Directory, Group Policy, Intune, and SCCM for comprehensive endpoint management and security",
   },
   {
-    role: "Java Full-Stack Developer",
-    company: "AdeptPros",
-    period: "2020 - 2021",
+    role: "Information Technology Support Specialist",
+    company: "California State University, Dominguez Hills",
+    period: "2021 - 2024",
     description:
-      "Developed Spring Boot insurance services to handle claim submission, validation workflows, and user profile operations, ensuring integration with downstream services and data pipelines.",
-  },
-  {
-    role: "Software Engineer",
-    company: "Genius Port",
-    period: "2019 - 2020",
-    description:
-      "Designed and implemented e-commerce features for a leading retail website, enhancing customer shopping experience with Java and Spring MVC.",
+      "Deployed, configured, and managed inventory for 3,000+ campus devices (Windows and macOS) using Jamf Pro and ManageEngine Endpoint Central, ensuring compliance with university security and software requirements",
   },
 ];
 

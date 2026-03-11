@@ -1,21 +1,31 @@
 import { motion } from "motion/react";
 import astro_icon from "../assets/astro_flying.svg";
 import astro_fall_icon from "../assets/astro.svg";
-import { useState } from "react";
+import astro_fuel_cut_icon from "../assets/astro_fuel_cut.svg";
+import { useState, useEffect } from "react";
 
 function Astro() {
-  const [booster, setBooster] = useState(true);
+  const [phase, setPhase] = useState<"flying" | "fuel_cut" | "falling">("flying");
   const [inTransition, setInTransition] = useState(true);
+
+  useEffect(() => {
+    if (phase === "fuel_cut") {
+      const timer = setTimeout(() => {
+        setPhase("falling");
+      }, 3000);
+      return () => clearTimeout(timer);
+    }
+  }, [phase]);
 
   const astro_click = () => {
     if (inTransition) return;
     setInTransition(true);
-    setBooster(!booster);
+    setPhase("fuel_cut");
   };
 
   return (
     <div className={inTransition ? "cursor-default" : "cursor-pointer"}>
-      {booster ? (
+      {phase === "flying" ? (
         <motion.img
           onClick={astro_click}
           initial={{ y: "100vh" }}
@@ -30,18 +40,24 @@ function Astro() {
           src={astro_icon}
           alt="astro"
         />
+      ) : phase === "fuel_cut" ? (
+        <motion.img
+          width={"60"}
+          src={astro_fuel_cut_icon}
+          alt="astro fuel cut"
+        />
       ) : (
         <motion.img
           animate={{ y: "100vh" }}
           onAnimationStart={() => setInTransition(true)}
           onAnimationComplete={() => {
             setInTransition(false);
-            setBooster(true);
+            setPhase("flying");
           }}
           transition={{ duration: 1.2 }}
           width={"60"}
           src={astro_fall_icon}
-          alt="astro_falling"
+          alt="astro falling"
         />
       )}
     </div>
