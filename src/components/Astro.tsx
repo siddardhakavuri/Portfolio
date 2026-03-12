@@ -12,7 +12,7 @@ function Astro() {
     if (phase === "fuel_cut") {
       const timer = setTimeout(() => {
         setPhase("falling");
-      }, 3000);
+      }, 1300);
       return () => clearTimeout(timer);
     }
   }, [phase]);

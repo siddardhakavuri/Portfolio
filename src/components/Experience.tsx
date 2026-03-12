@@ -46,7 +46,7 @@ const Experience = () => {
                   <h3 className="text-2xl font-semibold text-white">
                     {exp.role}
                   </h3>
-                  <span className="text-gray-400 font-mono text-sm">
+                  <span className="text-gray-300 font-mono text-sm">
                     {exp.period}
                   </span>
                 </div>

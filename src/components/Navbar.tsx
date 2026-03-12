@@ -7,33 +7,33 @@ const Navbar = () => {
 
   return (
     <nav className="text-white flex justify-between items-center sticky top-0 z-50 px-3 py-6">
-      <div className="absolute inset-0 -z-10 backdrop-blur-2xl mask-[linear-gradient(to_right,transparent_0.01rem,black_1rem,black_calc(100%-2%),transparent_100%)] pointer-events-none" />
+      <div className="absolute inset-0 -z-10 backdrop-blur-2xl lg:mask-[linear-gradient(to_right,transparent_0.01rem,black_1rem,black_calc(100%-2%),transparent_100%)] pointer-events-none" />
 
       {/* Logo */}
-      <a href="#" className="text-2xl z-50">
+      <a href="#" className="text-2xl font-bold hover:text-cyan-400 z-50">
         SK
       </a>
 
       {/* Desktop Menu */}
       <div className="hidden md:flex text-xl items-center overflow-auto">
-        <a href="#" className="pl-6 hover:text-gray-300 transition-colors">
+        <a href="#" className="pl-6 font-semibold hover:text-cyan-400 transition-colors">
           About
         </a>
         <a
           href="#experience"
-          className="pl-6 hover:text-gray-300 transition-colors"
+          className="pl-6 font-semibold hover:text-cyan-400 transition-colors"
         >
           Experience
         </a>
         <a
           href="#projects"
-          className="pl-6 hover:text-gray-300 transition-colors"
+          className="pl-6 font-semibold hover:text-cyan-400 transition-colors"
         >
           Projects
         </a>
         <a
           href="#contact"
-          className="pl-6 hover:text-gray-300 transition-colors"
+          className="pl-6 font-semibold hover:text-cyan-400 transition-colors"
         >
           Contact
         </a>
@@ -83,28 +83,28 @@ const Navbar = () => {
         <a
           href="#"
           onClick={toggleMenu}
-          className="hover:text-gray-300 transition-colors"
+          className="font-semibold hover:text-cyan-400 transition-colors"
         >
           About
         </a>
         <a
           href="#experience"
           onClick={toggleMenu}
-          className="hover:text-gray-300 transition-colors"
+          className="font-semibold hover:text-cyan-400 transition-colors"
         >
           Experience
         </a>
         <a
           href="#projects"
           onClick={toggleMenu}
-          className="hover:text-gray-300 transition-colors"
+          className="font-semibold hover:text-cyan-400 transition-colors"
         >
           Projects
         </a>
         <a
           href="#contact"
           onClick={toggleMenu}
-          className="hover:text-gray-300 transition-colors"
+          className="font-semibold hover:text-cyan-400 transition-colors"
         >
           Contact
         </a>

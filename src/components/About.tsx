@@ -13,7 +13,7 @@ const About = () => {
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >
-          <h1 className="md:text-5xl text-3xl flex justify-center content-center font-bold mb-8 bg-linear-to-r from-blue-400 to-emerald-400 bg-clip-text text-transparent ">
+          <h1 className="md:text-5xl text-3xl flex justify-center content-center font-bold mb-8 bg-linear-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent ">
             HEY, I'M SIDDARDHA KAVURI
           </h1>
           <div className="flex justify-center content-center">

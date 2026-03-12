@@ -58,10 +58,10 @@ const Projects = () => {
               viewport={{ once: true }}
               className="group block p-8 rounded-2xl bg-white/5 border border-white/10 hover:bg-white/10 transition-colors"
             >
-              <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors min-h-16 flex items-center">
+              <h3 className="text-2xl font-bold text-cyan-400 mb-3 min-h-16 flex items-center">
                 {project.title}
               </h3>
-              <p className="text-gray-400 my-10 leading-relaxed">
+              <p className="text-gray-300 my-10 leading-relaxed">
                 {project.description}
               </p>
               <div className="flex flex-wrap gap-3">
