@@ -46,18 +46,21 @@ const Projects = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
           {projects.map((project, index) => (
-            <motion.a
-              href={project.link}
-              target="_blank"
-              rel="noopener noreferrer"
+            <motion.div
               key={index}
-              initial={{ opacity: 0, scale: 0.95 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              whileHover={{ y: -5, transition: { duration: 0.1 } }}
-              transition={{ duration: 0.2 }}
+              initial={{ y: 20, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              transition={{ duration: 1 }}
               viewport={{ once: true }}
-              className="group block p-8 rounded-2xl bg-white/5 border border-white/10 hover:bg-white/10 transition-colors"
             >
+              <motion.a
+                href={project.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                whileHover={{ y: -5 }}
+                transition={{ duration: 0.15 }}
+                className="group block p-8 rounded-2xl bg-white/5 border border-white/10 hover:bg-white/10 transition-colors h-full"
+              >
               <h3 className="text-2xl font-bold text-cyan-400 mb-3 min-h-16 flex items-center">
                 {project.title}
               </h3>
@@ -75,6 +78,7 @@ const Projects = () => {
                 ))}
               </div>
             </motion.a>
+            </motion.div>
           ))}
         </div>
       </motion.div>
