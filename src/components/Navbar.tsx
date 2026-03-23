@@ -9,15 +9,14 @@ const Navbar = () => {
     <nav className="text-white flex justify-between items-center sticky top-0 z-50 px-3 py-6">
       <div className="absolute inset-0 -z-10 backdrop-blur-2xl lg:mask-[linear-gradient(to_right,transparent_0.01rem,black_1rem,black_calc(100%-2%),transparent_100%)] pointer-events-none" />
 
-      {/* Logo */}
-      <a href="#" className="text-2xl font-bold hover:text-cyan-400 z-50">
+      <a href="#about" aria-label="Home" className="text-2xl font-bold hover:text-cyan-400 z-50">
         SK
       </a>
 
       {/* Desktop Menu */}
       <div className="hidden md:flex text-xl items-center overflow-auto">
         <a
-          href="#"
+          href="#about"
           className="pl-6 font-semibold hover:text-cyan-400 transition-colors"
         >
           About
@@ -84,7 +83,7 @@ const Navbar = () => {
         className={`fixed inset-0 bg-black/95 backdrop-blur-md z-40 transition-transform duration-300 ease-in-out flex flex-col items-center justify-center space-y-8 text-2xl ${isOpen ? "translate-x-0" : "translate-x-full"} md:hidden`}
       >
         <a
-          href="#"
+          href="#about"
           onClick={toggleMenu}
           className="font-semibold hover:text-cyan-400 transition-colors"
         >
