@@ -24,35 +24,29 @@ const ScrollToTop = () => {
   }, []);
 
   return (
-    <a
-      href="#"
+    <button
+      onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
       aria-label="Scroll to top"
-      className={`fixed bottom-8 right-8 z-50 group transition-all duration-300 ${
+      className={`fixed bottom-8 right-8 z-50 transition-all duration-300 p-3 rounded-full bg-transparent text-white shadow-lg backdrop-blur-md hover:border-cyan-400/50 hover:text-cyan-400 hover:bg-cyan-400/10 ${
         isVisible
           ? "opacity-100 pointer-events-auto"
           : "opacity-0 pointer-events-none"
-      }`}
+      } ${isAtBottom ? "animate-bounce" : "hover:-translate-y-1"}`}
     >
-      <button
-        className={`p-3 rounded-full bg-transparent text-white shadow-lg backdrop-blur-md group-hover:border-cyan-400/50 group-hover:text-cyan-400 group-hover:bg-cyan-400/10 ${
-          isAtBottom ? "animate-bounce" : "group-hover:-translate-y-1"
-        }`}
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="2"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        >
-          <path d="M12 19V5M5 12l7-7 7 7" />
-        </svg>
-      </button>
-    </a>
+        <path d="M12 19V5M5 12l7-7 7 7" />
+      </svg>
+    </button>
   );
 };
 

@@ -14,7 +14,7 @@ const About = () => {
           viewport={{ once: true }}
         >
           <div className="relative w-fit mx-auto mb-8 mt-8">
-            <span className="absolute bottom-full sm:-left-10 left-0 mb-1 bg-linear-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent text-lg">
+            <span className="absolute bottom-full font-bold sm:-left-10 left-0 mb-1 bg-linear-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent text-lg">
               Hey I'm
             </span>
             <h1 className="text-6xl font-bold bg-linear-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
