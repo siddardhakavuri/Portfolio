@@ -24,10 +24,14 @@ function Astro() {
   };
 
   return (
-    <div className={inTransition ? "cursor-default" : "cursor-pointer"}>
+    <button 
+      onClick={astro_click}
+      aria-label="Interact with Astro animation"
+      className={`focus-visible:ring-2 focus-visible:ring-cyan-400 focus-visible:outline-none rounded-lg p-1 ${inTransition ? "cursor-default" : "cursor-pointer"}`}
+      disabled={inTransition}
+    >
       {phase === "flying" ? (
         <motion.img
-          onClick={astro_click}
           initial={{ y: "100vh" }}
           animate={{ y: 0 }}
           onAnimationStart={() => setInTransition(true)}
@@ -60,7 +64,7 @@ function Astro() {
           alt="astro falling"
         />
       )}
-    </div>
+    </button>
   );
 }
 

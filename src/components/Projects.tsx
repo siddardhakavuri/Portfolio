@@ -44,14 +44,15 @@ const Projects = () => {
           Projects
         </h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
+        <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
           {projects.map((project, index) => (
-            <motion.div
+            <motion.li
               key={index}
               initial={{ y: 20, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
               transition={{ duration: 1 }}
               viewport={{ once: true }}
+              className="list-none"
             >
               <motion.a
                 href={project.link}
@@ -61,26 +62,26 @@ const Projects = () => {
                 transition={{ duration: 0.15 }}
                 className="group block p-8 rounded-2xl bg-white/5 border border-white/10 hover:bg-white/10 transition-colors h-full"
               >
-              <h3 className="text-2xl font-bold text-cyan-400 mb-3 min-h-16 flex items-center">
-                {project.title}
-              </h3>
-              <p className="text-gray-300 my-10 leading-relaxed">
-                {project.description}
-              </p>
-              <div className="flex flex-wrap gap-3">
-                {project.tags.map((tag, tagIndex) => (
-                  <span
-                    key={tagIndex}
-                    className="px-3 py-1 text-xs font-medium text-cyan-400 bg-cyan-400/10 rounded-full"
-                  >
-                    {tag}
-                  </span>
-                ))}
-              </div>
-            </motion.a>
-            </motion.div>
+                <h3 className="text-2xl font-bold text-cyan-400 mb-3 min-h-16 flex items-center">
+                  {project.title}
+                </h3>
+                <p className="text-gray-300 my-10 leading-relaxed">
+                  {project.description}
+                </p>
+                <div className="flex flex-wrap gap-3">
+                  {project.tags.map((tag, tagIndex) => (
+                    <span
+                      key={tagIndex}
+                      className="px-3 py-1 text-xs font-medium text-cyan-400 bg-cyan-400/10 rounded-full"
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+              </motion.a>
+            </motion.li>
           ))}
-        </div>
+        </ul>
       </motion.div>
     </section>
   );

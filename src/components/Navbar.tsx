@@ -16,7 +16,10 @@ const Navbar = () => {
 
       {/* Desktop Menu */}
       <div className="hidden md:flex text-xl items-center overflow-auto">
-        <a href="#" className="pl-6 font-semibold hover:text-cyan-400 transition-colors">
+        <a
+          href="#"
+          className="pl-6 font-semibold hover:text-cyan-400 transition-colors"
+        >
           About
         </a>
         <a

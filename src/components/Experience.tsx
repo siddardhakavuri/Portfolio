@@ -30,15 +30,15 @@ const Experience = () => {
           Experience
         </h2>
 
-        <div className="space-y-12 border-l border-gray-800 ml-3">
+        <ul className="space-y-12 border-l border-gray-800 ml-3">
           {experiences.map((exp, index) => (
-            <motion.div
+            <motion.li
               key={index}
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 1, delay: index * 0.5 }}
               viewport={{ once: true }}
-              className="relative pl-8 md:pl-0"
+              className="relative pl-8 md:pl-0 list-none"
             >
               <div className="absolute w-4 h-4 bg-cyan-400 rounded-full -left-2.25 top-1.5 border-4 border-black " />
               <div className="md:pl-8">
@@ -55,9 +55,9 @@ const Experience = () => {
                   {exp.description}
                 </p>
               </div>
-            </motion.div>
+            </motion.li>
           ))}
-        </div>
+        </ul>
       </motion.div>
     </section>
   );
