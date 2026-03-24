@@ -9,7 +9,11 @@ const Navbar = () => {
     <nav className="text-white flex justify-between items-center sticky top-0 z-50 px-3 py-6">
       <div className="absolute inset-0 -z-10 backdrop-blur-2xl lg:mask-[linear-gradient(to_right,transparent_0.01rem,black_1rem,black_calc(100%-2%),transparent_100%)] pointer-events-none" />
 
-      <a href="#about" aria-label="Home" className="text-2xl font-bold hover:text-cyan-400 z-50">
+      <a
+        href="#"
+        aria-label="Home"
+        className="text-2xl font-bold bg-linear-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent z-50"
+      >
         SK
       </a>
 
@@ -17,25 +21,25 @@ const Navbar = () => {
       <div className="hidden md:flex text-xl items-center overflow-auto">
         <a
           href="#about"
-          className="pl-6 font-semibold hover:text-cyan-400 transition-colors"
+          className="pl-6 font-semibold hover:bg-linear-to-r from-cyan-400 to-blue-500 hover:bg-clip-text hover:text-transparent transition-colors"
         >
           About
         </a>
         <a
           href="#experience"
-          className="pl-6 font-semibold hover:text-cyan-400 transition-colors"
+          className="pl-6 font-semibold hover:bg-linear-to-r from-cyan-400 to-blue-500 hover:bg-clip-text hover:text-transparent transition-colors"
         >
           Experience
         </a>
         <a
           href="#projects"
-          className="pl-6 font-semibold hover:text-cyan-400 transition-colors"
+          className="pl-6 font-semibold hover:bg-linear-to-r from-cyan-400 to-blue-500 hover:bg-clip-text hover:text-transparent transition-colors"
         >
           Projects
         </a>
         <a
           href="#contact"
-          className="pl-6 font-semibold hover:text-cyan-400 transition-colors"
+          className="pl-6 font-semibold hover:bg-linear-to-r from-cyan-400 to-blue-500 hover:bg-clip-text hover:text-transparent transition-colors"
         >
           Contact
         </a>
@@ -85,21 +89,21 @@ const Navbar = () => {
         <a
           href="#about"
           onClick={toggleMenu}
-          className="font-semibold hover:text-cyan-400 transition-colors"
+          className="font-semibold hover:bg-linear-to-r from-cyan-400 to-blue-500 hover:bg-clip-text hover:text-transparent transition-colors"
         >
           About
         </a>
         <a
           href="#experience"
           onClick={toggleMenu}
-          className="font-semibold hover:text-cyan-400 transition-colors"
+          className="font-semibold hover:bg-linear-to-r from-cyan-400 to-blue-500 hover:bg-clip-text hover:text-transparent transition-colors"
         >
           Experience
         </a>
         <a
           href="#projects"
           onClick={toggleMenu}
-          className="font-semibold hover:text-cyan-400 transition-colors"
+          className="font-semibold hover:bg-linear-to-r from-cyan-400 to-blue-500 hover:bg-clip-text hover:text-transparent transition-colors"
         >
           Projects
         </a>

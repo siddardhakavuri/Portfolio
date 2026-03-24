@@ -14,7 +14,7 @@ const About = () => {
           viewport={{ once: true }}
         >
           <div className="relative w-fit mx-auto mb-8 mt-8">
-            <span className="absolute bottom-full font-bold sm:-left-10 left-0 mb-1 bg-linear-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent text-lg">
+            <span className="absolute bottom-full font-bold md:-left-10 left-0 mb-1 bg-linear-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent text-lg">
               Hey I'm
             </span>
             <h1 className="text-6xl font-bold bg-linear-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
@@ -32,9 +32,12 @@ const About = () => {
               href="https://www.linkedin.com/in/siddardhakavuri/"
               target="_blank"
               rel="noopener noreferrer"
-              className="p-2 transition-all text-gray-400 hover:text-gray-300 hover:scale-110"
+              className="group relative p-2 transition-all text-gray-400 hover:text-gray-300 hover:scale-110"
               aria-label="LinkedIn"
             >
+              <span className="absolute -bottom-10 left-1/2 -translate-x-1/2 scale-0 rounded bg-gray-800 p-2 text-xs text-white transition-all group-hover:scale-100 whitespace-nowrap">
+                LinkedIn
+              </span>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="32"
@@ -49,9 +52,12 @@ const About = () => {
               href="https://github.com/siddardhakavuri"
               target="_blank"
               rel="noopener noreferrer"
-              className="p-2 transition-all text-gray-400  hover:text-gray-300 hover:scale-110"
+              className="group relative p-2 transition-all text-gray-400 hover:text-gray-300 hover:scale-110"
               aria-label="GitHub"
             >
+              <span className="absolute -bottom-10 left-1/2 -translate-x-1/2 scale-0 rounded bg-gray-800 p-2 text-xs text-white transition-all group-hover:scale-100 whitespace-nowrap">
+                GitHub
+              </span>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="32"
@@ -65,9 +71,13 @@ const About = () => {
             <a
               href="mailto:kavuri.siddardha@gmail.com"
               target="_blank"
-              className="p-2 transition-all text-gray-400 hover:text-gray-300 hover:scale-110"
+              rel="noopener noreferrer"
+              className="group relative p-2 transition-all text-gray-400 hover:text-gray-300 hover:scale-110"
               aria-label="Email"
             >
+              <span className="absolute -bottom-10 left-1/2 -translate-x-1/2 scale-0 rounded bg-gray-800 p-2 text-xs text-white transition-all group-hover:scale-100 whitespace-nowrap">
+                Email
+              </span>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="32"
@@ -76,6 +86,26 @@ const About = () => {
                 fill="currentColor"
               >
                 <path d="M0 3v18h24v-18h-24zm21.518 2l-9.518 7.713-9.518-7.713h19.036zm-19.518 14v-11.817l10 8.104 10-8.104v11.817h-20z" />
+              </svg>
+            </a>
+            <a
+              href="https://drive.google.com/uc?export=download&id=1nq0UdiafLE1HHtXRYVci-KiSV_ocj1qz"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group relative p-2 transition-all text-gray-400 hover:text-gray-300 hover:scale-110"
+              aria-label="Download Resume"
+            >
+              <span className="absolute -bottom-10 left-1/2 -translate-x-1/2 scale-0 rounded bg-gray-800 p-2 text-xs text-white transition-all group-hover:scale-100 whitespace-nowrap">
+                Resume
+              </span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="32"
+                height="32"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z" />
               </svg>
             </a>
           </div>
