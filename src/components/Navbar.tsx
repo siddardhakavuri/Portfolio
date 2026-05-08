@@ -1,9 +1,62 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+
+const NAV_LINKS = [
+  { href: "#about", label: "About" },
+  { href: "#experience", label: "Experience" },
+  { href: "#projects", label: "Projects" },
+  { href: "#contact", label: "Contact" },
+];
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState<string>("");
 
   const toggleMenu = () => setIsOpen(!isOpen);
+
+  useEffect(() => {
+    const sectionIds = NAV_LINKS.map((l) => l.href.slice(1));
+    const ratioMap: Record<string, number> = {};
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          ratioMap[entry.target.id] = entry.intersectionRatio;
+        });
+        // Pick the section with the highest visible ratio
+        const best = Object.entries(ratioMap).reduce(
+          (acc, [id, ratio]) => (ratio > acc.ratio ? { id, ratio } : acc),
+          { id: "", ratio: 0 }
+        );
+        if (best.ratio > 0) setActiveSection(best.id);
+      },
+      { threshold: Array.from({ length: 101 }, (_, i) => i / 100) }
+    );
+
+    sectionIds.forEach((id) => {
+      const el = document.getElementById(id);
+      if (el) observer.observe(el);
+    });
+
+    return () => observer.disconnect();
+  }, []);
+
+  const linkClass = (href: string) => {
+    const isActive = activeSection === href.slice(1);
+    return `pl-6 font-semibold transition-colors ${
+      isActive
+        ? "bg-linear-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent"
+        : "hover:bg-linear-to-r from-cyan-400 to-blue-500 hover:bg-clip-text hover:text-transparent"
+    }`;
+  };
+
+  const mobileLinkClass = (href: string) => {
+    const isActive = activeSection === href.slice(1);
+    return `font-semibold transition-colors ${
+      isActive
+        ? "bg-linear-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent"
+        : "hover:bg-linear-to-r from-cyan-400 to-blue-500 hover:bg-clip-text hover:text-transparent"
+    }`;
+  };
 
   return (
     <nav className="text-white flex justify-between items-center sticky top-0 z-50 px-3 py-6">
@@ -19,30 +72,11 @@ const Navbar = () => {
 
       {/* Desktop Menu */}
       <div className="hidden md:flex text-xl items-center overflow-auto">
-        <a
-          href="#about"
-          className="pl-6 font-semibold hover:bg-linear-to-r from-cyan-400 to-blue-500 hover:bg-clip-text hover:text-transparent transition-colors"
-        >
-          About
-        </a>
-        <a
-          href="#experience"
-          className="pl-6 font-semibold hover:bg-linear-to-r from-cyan-400 to-blue-500 hover:bg-clip-text hover:text-transparent transition-colors"
-        >
-          Experience
-        </a>
-        <a
-          href="#projects"
-          className="pl-6 font-semibold hover:bg-linear-to-r from-cyan-400 to-blue-500 hover:bg-clip-text hover:text-transparent transition-colors"
-        >
-          Projects
-        </a>
-        <a
-          href="#contact"
-          className="pl-6 font-semibold hover:bg-linear-to-r from-cyan-400 to-blue-500 hover:bg-clip-text hover:text-transparent transition-colors"
-        >
-          Contact
-        </a>
+        {NAV_LINKS.map(({ href, label }) => (
+          <a key={href} href={href} className={linkClass(href)}>
+            {label}
+          </a>
+        ))}
       </div>
 
       {/* Mobile Hamburger Button */}
@@ -86,34 +120,16 @@ const Navbar = () => {
       <div
         className={`fixed inset-0 bg-black/95 backdrop-blur-md z-40 transition-transform duration-300 ease-in-out flex flex-col items-center justify-center space-y-8 text-2xl ${isOpen ? "translate-x-0" : "translate-x-full"} md:hidden`}
       >
-        <a
-          href="#about"
-          onClick={toggleMenu}
-          className="font-semibold hover:bg-linear-to-r from-cyan-400 to-blue-500 hover:bg-clip-text hover:text-transparent transition-colors"
-        >
-          About
-        </a>
-        <a
-          href="#experience"
-          onClick={toggleMenu}
-          className="font-semibold hover:bg-linear-to-r from-cyan-400 to-blue-500 hover:bg-clip-text hover:text-transparent transition-colors"
-        >
-          Experience
-        </a>
-        <a
-          href="#projects"
-          onClick={toggleMenu}
-          className="font-semibold hover:bg-linear-to-r from-cyan-400 to-blue-500 hover:bg-clip-text hover:text-transparent transition-colors"
-        >
-          Projects
-        </a>
-        <a
-          href="#contact"
-          onClick={toggleMenu}
-          className="font-semibold hover:text-cyan-400 transition-colors"
-        >
-          Contact
-        </a>
+        {NAV_LINKS.map(({ href, label }) => (
+          <a
+            key={href}
+            href={href}
+            onClick={toggleMenu}
+            className={mobileLinkClass(href)}
+          >
+            {label}
+          </a>
+        ))}
       </div>
     </nav>
   );
