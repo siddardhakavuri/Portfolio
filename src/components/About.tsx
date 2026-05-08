@@ -23,8 +23,8 @@ const About = () => {
           </div>
           <div className="flex justify-center content-center">
             <p className="sm:w-2/3 w-full md:text-xl text-lg text-center flex flex-wrap  text-gray-300 leading-relaxed mb-6">
-              IT Support Professional specializing in troubleshooting,
-              maintaining, and optimizing technical infrastructure.
+              Software Engineer specializing in building and designing modern,
+              scalable web applications and software solutions.
             </p>
           </div>
           <div className="flex justify-center text-white gap-3">
